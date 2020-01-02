@@ -1,0 +1,25 @@
+'''heads tails game'''
+
+import random
+
+def coinToss(number):
+    heads = 0
+    tails = 0
+    for flip in range(number):
+        coinFlip = random.choice([1, 2])
+
+        if coinFlip == 1:
+            print("Heads")
+            recordList.append("Heads")
+        else:
+            print("Tails")
+            recordList.append("Tails")
+
+if __name__ == '__main__':
+    print("Lets play a heads or tails game!")
+    number = input("Number of times to flip coin: ")
+    recordList = []
+    if type(number) == str and len(number)>0:
+        coinToss(int(number))
+        print("Heads:", str(recordList.count("Heads")) , "Tails:",str(recordList.count("Tails")))
+    
